@@ -333,39 +333,39 @@ inline QString system_path_to_production_path (const QString& )
     return {};
 }
 
-//inline bool check_file_position_legality (const QString& path)
-//{
-//    QFileInfo info {path};
-//    assert (info.isFile ());
-//    auto filename = info.baseName ();
+inline bool check_file_position_legality (const QString& path)
+{
+    QFileInfo info {path};
+    assert (info.isFile ());
+    auto filename = info.baseName ();
 
-//    auto capp_dir = info.dir ();
-//    auto product_dir = capp_dir;
-//    bool is_ok;
-//    is_ok = product_dir.cdUp (); //assert (is_ok);
-//    if (!is_ok)
-//    {
-//        return false;
-//    }
-//    auto master_dir = product_dir;
-//    is_ok = master_dir.cdUp (); //assert (is_ok);
-//    if (!is_ok)
-//    {
-//        return false;
-//    }
+    auto capp_dir = info.dir ();
+    auto product_dir = capp_dir;
+    bool is_ok;
+    is_ok = product_dir.cdUp (); //assert (is_ok);
+    if (!is_ok)
+    {
+        return false;
+    }
+    auto master_dir = product_dir;
+    is_ok = master_dir.cdUp (); //assert (is_ok);
+    if (!is_ok)
+    {
+        return false;
+    }
 
-//    auto master_gbk = unicode_to_system (master_dir.absolutePath ().toStdString ());
-//    auto product_gbk = unicode_to_system (PRODUCT_PATH);
+    auto master_gbk = unicode_to_system (master_dir.absolutePath ().toStdString ());
+    auto product_gbk = unicode_to_system (PRODUCT_PATH);
 
-//    if (boost::filesystem::equivalent (master_gbk, product_gbk))
-//    {
-//        return true;
-//    }
-//    else
-//    {
-//        return false;
-//    }
-//}
+    if (boost::filesystem::equivalent (master_gbk, product_gbk))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 
 inline QString get_method (const json& file_data)

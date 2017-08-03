@@ -65,7 +65,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="add">
          <property name="text">
           <string>添加对比</string>
          </property>
@@ -93,7 +93,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="add_2">
          <property name="text">
           <string>添加对比</string>
          </property>
@@ -121,7 +121,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="add_3">
          <property name="text">
           <string>添加对比</string>
          </property>

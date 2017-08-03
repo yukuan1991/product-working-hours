@@ -2,7 +2,7 @@
 #include "ui_pwhcontrast.h"
 #include <assert.h>
 #include <memory>
-//#include <QTableWidgetItem>
+#include "Pwh/production_management_button_tree_dlg.h"
 
 PwhContrast::PwhContrast(QWidget *parent) :
     QWidget(parent),
@@ -11,6 +11,7 @@ PwhContrast::PwhContrast(QWidget *parent) :
     ui->setupUi(this);
     setup_more_ui();
     set_table();
+    init_conn();
 
 }
 
@@ -18,6 +19,12 @@ PwhContrast::~PwhContrast()
 {
     delete ui;
 }
+
+void PwhContrast::init_conn()
+{
+    connect(ui->add, &QPushButton::clicked, this, &PwhContrast::on_add_clicked);
+}
+
 
 void PwhContrast::setup_more_ui()
 {
@@ -77,4 +84,30 @@ void PwhContrast::init_table(QTableWidget* table)
     item->setText ("占比");
     item->setTextAlignment (Qt::AlignHCenter | Qt::AlignVCenter);
     item->setFont (bold_font);
+}
+
+std::optional<QString> PwhContrast::exec_window_tree()
+{
+    production_management_button_tree_dlg dlg;
+    dlg.setWindowTitle("载入产品工时数据");
+
+    if (dlg.exec () == QDialog::Accepted)
+    {
+        auto path = dlg.get_path();
+        return path;
+    }
+    else
+    {
+        return {};
+    }
+}
+
+void PwhContrast::on_add_clicked()
+{
+    const auto opt_path = exec_window_tree();
+
+    if (opt_path)
+    {
+        set_current_path(*opt_path);
+    }
 }

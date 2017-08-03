@@ -13,6 +13,8 @@ QMAKE_CXXFLAGS += -std=c++1z
 TARGET = product-working-hours
 TEMPLATE = app
 
+DEFINES += PRODUCT_PATH=\\\"./product\\\"
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -37,7 +39,9 @@ SOURCES += main.cc\
     Qt-Utils/tinyxml2.cpp \
     Qt-Utils/des.cpp \
     Model/product_info_model.cpp \
-    Model/json_model.cpp
+    Model/json_model.cpp \
+    Pwh/production_management_button_tree_dlg.cpp \
+    data_veryfication.cpp
 
 HEADERS  += \
     Ribbon.h \
@@ -55,12 +59,16 @@ HEADERS  += \
     Qt-Utils/qt.hpp \
     Qt-Utils/des.h \
     Model/product_info_model.h \
-    Model/json_model.h
+    Model/json_model.h \
+    Pwh/production_management_button_tree_dlg.h \
+    data_veryfication.h \
+    Qt-Utils/krys_application.hpp
 
 FORMS    += pwhmain.ui \
     Pwh/pwhanalysis.ui \
     Pwh/pwhcontrast.ui \
-    Pwh/pwhmanagement.ui
+    Pwh/pwhmanagement.ui \
+    Pwh/production_management_button_tree_dlg.ui
 
 LIBS += -lboost_filesystem
 LIBS += -lboost_system
