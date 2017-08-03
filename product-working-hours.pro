@@ -35,7 +35,9 @@ SOURCES += main.cc\
     Model/product_structure_model.cpp \
     Qt-Utils/encryption.cpp \
     Qt-Utils/tinyxml2.cpp \
-    Qt-Utils/des.cpp
+    Qt-Utils/des.cpp \
+    Model/product_info_model.cpp \
+    Model/json_model.cpp
 
 HEADERS  += \
     Ribbon.h \
@@ -51,7 +53,9 @@ HEADERS  += \
     Qt-Utils/json.hpp \
     Qt-Utils/tinyxml2.h \
     Qt-Utils/qt.hpp \
-    Qt-Utils/des.h
+    Qt-Utils/des.h \
+    Model/product_info_model.h \
+    Model/json_model.h
 
 FORMS    += pwhmain.ui \
     Pwh/pwhanalysis.ui \
