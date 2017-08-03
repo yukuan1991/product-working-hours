@@ -7,6 +7,8 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG -= c++11
+QMAKE_CXXFLAGS += -std=c++1z
 
 TARGET = product-working-hours
 TEMPLATE = app
@@ -24,8 +26,39 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cc\
-        pwhmain.cc
+    Ribbon.cc \
+    PwhMain.cc \
+    PwhRibbon.cc \
+    Pwh/PwhAnalysis.cc \
+    Pwh/PwhContrast.cc \
+    Pwh/PwhManagement.cc \
+    Model/product_structure_model.cpp \
+    Qt-Utils/encryption.cpp \
+    Qt-Utils/tinyxml2.cpp \
+    Qt-Utils/des.cpp
 
-HEADERS  += pwhmain.h
+HEADERS  += \
+    Ribbon.h \
+    PwhMain.h \
+    PwhRibbon.h \
+    Pwh/PwhAnalysis.h \
+    Pwh/PwhContrast.h \
+    Pwh/PwhManagement.h \
+    Model/product_structure_model.h \
+    arithmetic_resource.hpp \
+    Qt-Utils/encryption.h \
+    Qt-Utils/stl_extension.hpp \
+    Qt-Utils/json.hpp \
+    Qt-Utils/tinyxml2.h \
+    Qt-Utils/qt.hpp \
+    Qt-Utils/des.h
 
-FORMS    += pwhmain.ui
+FORMS    += pwhmain.ui \
+    Pwh/pwhanalysis.ui \
+    Pwh/pwhcontrast.ui \
+    Pwh/pwhmanagement.ui
+
+LIBS += -lboost_filesystem
+LIBS += -lboost_system
+
+DISTFILES +=
