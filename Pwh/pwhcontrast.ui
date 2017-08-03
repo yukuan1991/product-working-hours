@@ -39,7 +39,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTreeView" name="treeView"/>
+      <widget class="QTreeView" name="tree_product"/>
      </item>
     </layout>
    </item>
@@ -55,7 +55,7 @@
      <item row="0" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="label_add_master">
          <property name="text">
           <string>N/A</string>
          </property>
@@ -72,7 +72,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="delete_2">
          <property name="text">
           <string>清除</string>
          </property>
@@ -83,7 +83,7 @@
      <item row="0" column="2">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="label_add_slave1">
          <property name="text">
           <string>N/A</string>
          </property>
@@ -100,7 +100,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="delete_3">
          <property name="text">
           <string>清除</string>
          </property>
@@ -111,7 +111,7 @@
      <item row="0" column="3">
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_add_slave2">
          <property name="text">
           <string>N/A</string>
          </property>
@@ -128,7 +128,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="delete_4">
          <property name="text">
           <string>清除</string>
          </property>
@@ -212,10 +212,10 @@
       <widget class="QTableWidget" name="table_master"/>
      </item>
      <item row="1" column="2">
-      <widget class="QTableWidget" name="table_slave2"/>
+      <widget class="QTableWidget" name="table_slave1"/>
      </item>
      <item row="1" column="3">
-      <widget class="QTableWidget" name="table_slave1"/>
+      <widget class="QTableWidget" name="table_slave2"/>
      </item>
     </layout>
    </item>
