@@ -35,9 +35,9 @@ PwhContrast::~PwhContrast()
 
 void PwhContrast::init_conn()
 {
-    connect(ui->add, &QPushButton::clicked, this, &PwhContrast::on_add_clicked);
-    connect(ui->add_2, &QPushButton::clicked, this, &PwhContrast::on_add_2_clicked);
-    connect(ui->add_3, &QPushButton::clicked, this, &PwhContrast::on_add_3_clicked);
+//    connect(ui->add, &QPushButton::clicked, this, &PwhContrast::on_add_clicked);
+//    connect(ui->add_2, &QPushButton::clicked, this, &PwhContrast::on_add_2_clicked);
+//    connect(ui->add_3, &QPushButton::clicked, this, &PwhContrast::on_add_3_clicked);
 
 }
 
@@ -403,6 +403,7 @@ QTableWidget *PwhContrast::find_empty_table()
 
 void PwhContrast::on_add_clicked()
 {
+    qDebug() << "on_add";
     const auto opt_path = exec_window_tree();
 
     if (opt_path)

@@ -34,6 +34,11 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>报表管理</string>
+      </attribute>
+     </widget>
      <widget class="PwhManagement" name="tab">
       <attribute name="title">
        <string>产品工时管理</string>
